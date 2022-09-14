@@ -121,6 +121,8 @@ margin-left: 20px;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    position: absolute;
+    bottom: 25px;
 }
 .week div{
     width: 12%;
@@ -151,14 +153,20 @@ margin-left: 20px;
     color: darkgrey;
 }
 
-.search-wr{
+/* .search-wr{
     margin-bottom: 20px;
-}
+} */
 
 .correct-name{
-    margin-bottom: 180px;
+    margin-top: 20px;
     font-size: 12px;
     text-transform: uppercase;
     text-align: center;
     display: none;
+}
+.visible{
+    display: block;
+}
+.search-wr{
+    height: 55px;
 }

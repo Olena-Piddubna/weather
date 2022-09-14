@@ -2,6 +2,7 @@
 
 class Weather{
     constructor(){
+    
         this.city_name = document.querySelector(".header h1");
         this.degrees = document.querySelector(".degrees p");
         this.cloud = document.querySelector(".first-section span");
@@ -20,6 +21,8 @@ class Weather{
 
         this.day = document.querySelectorAll(".day p");
         this.dayDegrees = document.querySelectorAll(".day span");
+
+        this.correctName = document.querySelector(".correct-name");
         
         this.init();
     }
@@ -51,7 +54,14 @@ class Weather{
                     this.wrapper.classList.add("reverse-wrapper");
                 }
                 this.input.value = "";
+
+                this.correctName.classList.remove("visible");
+
     
+            })
+
+            this.input.addEventListener("click", () => {
+                this.correctName.classList.add("visible");
             })
     }   
 
@@ -79,7 +89,7 @@ class Weather{
                 console.log(temperature);
 
                 this.day[j].innerHTML = nameDay;
-                this.dayDegrees[j].innerHTML = this.convertDegree(temperature);
+                this.dayDegrees[j].innerHTML = this.convertDegree(temperature) + "&deg";
 
                 j++;
 
