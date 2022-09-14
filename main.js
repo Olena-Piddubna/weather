@@ -2,7 +2,6 @@
 
 class Weather{
     constructor(){
-    
         this.city_name = document.querySelector(".header h1");
         this.degrees = document.querySelector(".degrees p");
         this.cloud = document.querySelector(".first-section span");
